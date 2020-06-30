@@ -1,6 +1,6 @@
 
 import MouseLookController from './MouseLookController.js';
-import { Renderer, Scene, Mesh, Primitives, BasicMaterial, PerspectiveCamera, vec3, vec4 } from '../lib/engine/index.js';
+import { Renderer, Scene, Mesh, Primitive, BasicMaterial, PerspectiveCamera, vec3, vec4 } from '../lib/engine/index.js';
 
 // Create a Renderer and append the canvas element to the DOM.
 let renderer = new Renderer(window.innerWidth, window.innerHeight);
@@ -22,9 +22,9 @@ const basicMaterial3 = new BasicMaterial({
 });
 
 // Create a box primitive with the helper function create box.
-const boxPrimitive1 = Primitives.createBox(basicMaterial1);
-const boxPrimitive2 = Primitives.createBox(basicMaterial2);
-const boxPrimitive3 = Primitives.createBox(basicMaterial3);
+const boxPrimitive1 = Primitive.createCube(basicMaterial1);
+const boxPrimitive2 = Primitive.createCube(basicMaterial2);
+const boxPrimitive3 = Primitive.createCube(basicMaterial3);
 
 // Create a Mesh representing a cube in the scene.
 const cube1 = new Mesh([boxPrimitive1]);
